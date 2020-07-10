@@ -14,7 +14,7 @@ dotenv.config()
 // Settings
 app.set('port', process.env.PORT || 3000);
 app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '../views'));
 
 // Middleware
 app.use(morgan('dev'))
@@ -25,7 +25,7 @@ app.use('/', indexRoutes)
 app.use('/books', booksRoutes)
 
 // Static Files
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, '../public')))
 
 
 export default app;
